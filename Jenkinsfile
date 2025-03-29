@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'docker:latest'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
-    } 
+    agent any 
     stages {
         stage('Checkout') {
             steps {
@@ -13,7 +8,6 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'sudo usermod -aG docker jenkins'
                 sh 'docker build -t build-helloworld .'
             }
         }
