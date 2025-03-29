@@ -8,7 +8,7 @@
         }
         stage('Build') {
             steps {
-                sh 'docker build -t hit-counter .'
+                sh 'docker build -t helloworld .'
             }
         }
         stage('Test') {
