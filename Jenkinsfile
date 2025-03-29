@@ -1,5 +1,5 @@
- pipeline {
-    agent any
+pipeline {
+    agent any 
     stages {
         stage('Checkout') {
             steps {
@@ -8,26 +8,28 @@
         }
         stage('Build') {
             steps {
-                sh 'docker build -t helloworld .'
+                sh 'docker build -t build-helloworld .'
             }
         }
         stage('Test') {
             steps {
                 sh 'Running tests...'
+                // Thêm các lệnh test ở đây
             }
         }
         stage('Deploy') {
             steps {
                 sh 'Deploying...'
+                // Thêm các lệnh deploy ở đây
             }
         }
     }
     post {
         success {
-            sh 'Successfully'
+            echo 'Pipeline executed successfully!'
         }
         failure {
-            sh 'Build failed'
+            echo 'Pipeline execution failed!'
         }
     }
 }
