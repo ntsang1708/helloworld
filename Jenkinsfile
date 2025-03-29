@@ -13,21 +13,21 @@
         }
         stage('Test') {
             steps {
-                echo 'Running tests...'
+                sh 'Running tests...'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                sh 'Deploying...'
             }
         }
     }
     post {
         success {
-            echo
+            sh
         }
         failure {
-            echo
+            sh
         }
     }
 }
