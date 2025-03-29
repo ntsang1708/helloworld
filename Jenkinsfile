@@ -24,10 +24,10 @@
     }
     post {
         success {
-            echo
+            sh 'Successfully'
         }
         failure {
-            echo
+            sh 'Build failed'
         }
     }
 }
