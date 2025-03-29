@@ -8,6 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh 'sudo usermod -aG docker jenkins'
                 sh 'docker build -t build-helloworld .'
             }
         }
