@@ -24,10 +24,10 @@
     }
     post {
         success {
-            sh
+            echo
         }
         failure {
-            sh
+            echo
         }
     }
 }
