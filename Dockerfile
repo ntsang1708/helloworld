@@ -15,5 +15,7 @@ RUN dnf install -y sudo
 # Thêm user jenkins vào nhóm docker để cho phép chạy lệnh docker mà không cần quyền root
 RUN usermod -aG docker jenkins
 
+RUN sudo systemctl start docker
+
 # Quay lại người dùng jenkins
 USER jenkins
