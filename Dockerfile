@@ -18,4 +18,4 @@ RUN usermod -aG docker jenkins
 RUN sudo systemctl restart jenkins
 
 # Quay lại người dùng jenkins
-USER jenkins
+# USER jenkins
